@@ -38,3 +38,21 @@ table.list { width: 100%; border-collapse: collapse; margin: 0.6em 0; }
 table.list th { text-align: left; font-family: "Permanent Marker", cursive; font-weight: 400; border-bottom: 3px solid var(--edge); padding: 6px 8px; }
 table.list td { padding: 8px; border-bottom: 1px solid var(--fill); }
 table.list .num { text-align: right; font-family: "Saira Stencil One", sans-serif; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0.8em 0; align-items: end; }
+.pick { display: inline-flex; flex-direction: column; gap: 2px; font-size: 0.85rem; font-weight: 700; }
+.range { display: inline-flex; flex-wrap: wrap; gap: 8px 12px; align-items: end; }
+select, input[type="date"] { background: var(--fill); color: var(--ink); border: 3px solid var(--edge); border-radius: 10px; padding: 6px 8px; font: inherit; font-weight: 400; }
+dl.facts { margin: 0.6em 0; }
+dl.facts .row { display: flex; justify-content: space-between; gap: 16px; padding: 6px 0; border-bottom: 1px solid var(--fill); }
+dl.facts dt { margin: 0; }
+dl.facts dd { margin: 0; text-align: right; font-family: "Saira Stencil One", sans-serif; }
+h2 { font-family: "Permanent Marker", cursive; font-weight: 400; color: var(--teal-dark); font-size: 1.4rem; margin: 1.2em 0 0.3em; }
+ul.stats { list-style: none; padding: 0; margin: 0.4em 0; }
+ul.stats li { display: grid; grid-template-columns: 1fr auto; gap: 0 12px; padding: 8px 0; border-bottom: 1px solid var(--fill); }
+ul.stats .num { font-family: "Saira Stencil One", sans-serif; text-align: right; }
+ul.stats small { grid-column: 1 / -1; opacity: 0.8; }
+pre.hand { white-space: pre-wrap; word-break: break-word; background: var(--fill); border: 3px solid var(--edge); border-radius: 14px; padding: 12px 14px; font: 0.92rem/1.5 ui-monospace, Menlo, Consolas, monospace; }
+svg.curve { width: 100%; height: auto; max-height: 220px; background: var(--fill); border: 3px solid var(--edge); border-radius: 14px; }
+svg.curve .line { fill: none; stroke: var(--teal-dark); stroke-width: 3; stroke-linejoin: round; }
+svg.curve .zero { stroke: var(--edge); stroke-dasharray: 4 4; stroke-width: 1.5; }
+@media (min-width: 900px) { .card.narrow { max-width: 900px; } }
