@@ -2,7 +2,7 @@
 @font-face { font-family: "Permanent Marker"; src: url("fonts/PermanentMarker-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "Saira Stencil One"; src: url("fonts/SairaStencilOne-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
 [hidden] { display: none !important; }
-:root { color-scheme: dark; --sky: #202124; --paper: #2b2c2f; --fill: #3c4043; --ink: #e8eaed; --edge: #80868b; --teal: #19a090; --teal-btn: #0f7a6d; --teal-dark: #3cc4b3; --orange: #ff5a36; }
+:root { color-scheme: dark; --sky: #202124; --paper: #2b2c2f; --fill: #3c4043; --ink: #e8eaed; --edge: #80868b; --teal: #19a090; --teal-btn: #0f7a6d; --teal-dark: #3cc4b3; --orange: #ff5a36; --warn: #ffd23f; }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--sky); color: var(--ink); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
@@ -56,3 +56,20 @@ svg.curve { width: 100%; height: auto; max-height: 220px; background: var(--fill
 svg.curve .line { fill: none; stroke: var(--teal-dark); stroke-width: 3; stroke-linejoin: round; }
 svg.curve .zero { stroke: var(--edge); stroke-dasharray: 4 4; stroke-width: 1.5; }
 @media (min-width: 900px) { .card.narrow { max-width: 900px; } }
+/* the replay on a table: a frame of the same site, its height set by the table itself (item 50) */
+.table-slot { margin: 16px 0; }
+iframe.table-frame { display: block; width: 100%; height: 560px; border: 0; background: transparent; }
+/* the exchange-rate marks (item 50): drawn like the phone's, a small ringed word, yellow when it is a warning */
+.ratemark { display: inline-block; min-width: 20px; height: 20px; padding: 0 5px; margin-left: 6px; border: 1.5px solid var(--edge); border-radius: 10px; font-size: 11px; line-height: 17px; font-weight: 800; text-align: center; vertical-align: middle; }
+.ratemark.warn { border-color: var(--warn); color: var(--warn); }
+.rates { list-style: none; padding: 0; margin: 0.4em 0; font-size: 0.92rem; }
+.rates li { margin: 0.2em 0; }
+.tagchips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.4em 0; }
+.tagchips button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 3px 10px; border: 2px solid var(--edge); border-radius: 14px; background: var(--fill); color: var(--ink); cursor: pointer; }
+.tagchips button[aria-pressed="true"] { border-color: var(--teal); background: var(--teal-btn); }
+.pick input[type="search"] { min-width: 12em; }
+.button.danger { background: var(--fill); border-color: var(--warn); color: var(--warn); }
+.button:disabled { opacity: 0.45; cursor: not-allowed; }
+p.warn { color: var(--warn); font-weight: 700; }
+label.radio { display: flex; gap: 10px; align-items: flex-start; margin: 10px 0; cursor: pointer; }
+label.radio small { color: var(--ink); opacity: 0.85; }
