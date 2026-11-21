@@ -1,6 +1,6 @@
 // Keeps the app's own files (not the records, not the cloud) so the app opens from the disk. A new build has a new name, and the old files are removed.
-const CACHE = 'dp-app-f3c3b857ae';
-const FILES = ["./","index.html","assets/style-9ca2e253.css","assets/app-GLSKLJGM.js","assets/open-worker-7ed72766.js","assets/fonts/PermanentMarker-Regular.ttf","assets/fonts/SairaStencilOne-Regular.ttf","assets/chunk-ESEMA7KK.js","assets/chunk-Y7N664HK.js","assets/chunk-5MKIHOXL.js","assets/chunk-LNZNMLCI.js","assets/chunk-VQYLVK5J.js","assets/chunk-E64E2GFH.js","assets/chunk-3JHXMJGB.js","assets/chunk-GT4R6H4Y.js","assets/chunk-P5YWMB3D.js","assets/chunk-PWR6LBOG.js","assets/chunk-R3N62QRR.js"];
+const CACHE = 'dp-app-c4d18f3ed9';
+const FILES = ["./","index.html","assets/style-a5d885f3.css","assets/app-VVOGUVFW.js","assets/open-worker-7ed72766.js","assets/fonts/PermanentMarker-Regular.ttf","assets/fonts/SairaStencilOne-Regular.ttf","assets/chunk-FGLQY6EF.js","assets/chunk-Y7N664HK.js","assets/chunk-VDZDZDBG.js","assets/chunk-LNZNMLCI.js","assets/chunk-KOOODQPZ.js","assets/chunk-E64E2GFH.js","assets/chunk-3JHXMJGB.js","assets/chunk-GT4R6H4Y.js","assets/chunk-P5YWMB3D.js","assets/chunk-PWR6LBOG.js","assets/chunk-R3N62QRR.js"];
 self.addEventListener('install', (e) => e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting())));
 self.addEventListener('activate', (e) => e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())));
 self.addEventListener('fetch', (e) => {
